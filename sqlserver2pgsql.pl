@@ -1626,7 +1626,7 @@ sub generate_schema
     {
         print BEFORE "CREATE EXTENSION IF NOT EXISTS citext;\n";
     }
-    if (defined ($objects->{CASTS}))
+    if ($kettle && defined ($objects->{CASTS}))
     {
         foreach my $cast (keys %{$objects->{CASTS}})
         {
